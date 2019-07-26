@@ -22,7 +22,10 @@ particleGun{std::make_unique<G4ParticleGun>(1)}
 	proton = particleTable->FindParticle(particleName="proton");
 }
 
-MyPrimaryGeneratorAction::~MyPrimaryGeneratorAction() {}
+MyPrimaryGeneratorAction::~MyPrimaryGeneratorAction()
+{
+//	Must not explicitly delete particleGun as it is a unique_ptr
+}
 
 void MyPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {

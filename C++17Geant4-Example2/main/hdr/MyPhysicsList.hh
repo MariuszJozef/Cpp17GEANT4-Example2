@@ -11,7 +11,6 @@ public:
 	~MyPhysicsList();
 
 protected:
-	// Construct particle and physics process
 	void ConstructParticle() override;
 	void ConstructProcess() override;
 	void SetCuts() override;

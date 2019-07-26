@@ -19,7 +19,7 @@ public:
 
 private:
 	std::unique_ptr<G4ParticleGun> particleGun {nullptr};
-	G4ParticleDefinition *geantino {nullptr};
+	G4ParticleDefinition *geantino {nullptr}; // smart pointers not required
 	G4ParticleDefinition *electron {nullptr};
 	G4ParticleDefinition *positron {nullptr};
 	G4ParticleDefinition *gamma {nullptr};
